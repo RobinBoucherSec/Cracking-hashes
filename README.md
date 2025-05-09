@@ -18,8 +18,8 @@ Learn and practice the fundamentals of hash generation and password cracking usi
 - Documented technical processes clearly and systematically
 
 ### Tools Used
-[Bullet Points - Remove this afterwards]
 
+- Notion – For deep documentation
 - Kali Linux – For penetration testing and command-line operations
 - Hashcat – Advanced password recovery tool for GPU-based hash cracking
 - John the Ripper (JtR) – Fast, CPU-based password cracker
@@ -33,19 +33,30 @@ Learn and practice the fundamentals of hash generation and password cracking usi
 ## Steps
 drag & drop screenshots here or use imgur and reference them using imgsrc
 
-Every screenshot should have some text explaining what the screenshot is about.
-
 1. Generating Hashes
+
+First we will create the file location for all the hashes we will create:
+
+```bash
+mkdir -p ~/projects/hashes/
+```
 
 Created hashes using multiple algorithms:
 
-MD5 : echo -n "fuckyou" | md5sum > file
-
-SHA-256 : echo -n "spongebob" | sha256sum > file
-
-bcrypt : Python script using bcrypt.hashpw()
-
+```bash
+MD5 : echo -n "poop" | md5sum > ~/projects/hashes/md5_hash.txt
+```
+```bash
+SHA-256 : echo -n "spongebob" | sha256sum > ~/projects/hashes/sha256_hash.txt
+```
+```bash
+sudo apt install python3 python3-pip SEPARÉ OU PAS ? TESTER DANS VM
+pip3 install bcrypt
+```
+```bash
 SHA-512crypt : mkpasswd --method=sha-512 princess
+```
+
 
 3. Understanding Hash Types
 
