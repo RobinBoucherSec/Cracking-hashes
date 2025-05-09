@@ -1,5 +1,7 @@
 # Hashcat-Intro
 
+First, note that I've created a comprehensive Notion's guide called [Intro to Hashcat - Making & Cracking Hashes](https://bold-top-b0e.notion.site/Intro-to-Hashcat-making-cracking-hashes-1e2d8ff66ad2808c910fd25b868c9840?pvs=4). I suggest you take a look if you're interested in understading the fundamentals of hashing.
+
 ## Objective
 
 Learn and practice the fundamentals of hash generation and password cracking using tools like Hashcat and John the Ripper, with a focus on improving clarity in explanation, workflow discipline, and understanding real-world cybersecurity implications.
