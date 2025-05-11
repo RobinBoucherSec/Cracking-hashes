@@ -34,6 +34,14 @@ This lab aimed to build foundational knowledge in password security, improve tec
 
 [Understand and Identify the hash](#Understand-and-Identify-the-hash)
 
+[Time to CRACK 😱](#Time-to-CRACK-😱)
+
+[Id and Crack md5](Id-and-Crack-md5)
+
+[Id and Crack sha256](Id-and-Crack-sha256)
+
+[Id and Crack sha512crypt](Id-and-Crack-sha512crypt)
+
 
 # Steps begin here
 
