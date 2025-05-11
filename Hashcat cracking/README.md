@@ -342,6 +342,13 @@ hashcat -m 3200 -a 0 bcrypt_hash.txt /usr/share/wordlists/rockyou.txt
 
 - Password is **`iloveyou`**.
 
+  ## Fianl thoughts
+
+Throughout this project, I encountered challenges like identifying hash types, especially when tools like hashid failed to detect bcrypt. I've leard easy troubleshooting issues with malformed hashes, GZip-compressed wordlists, and Hashcat syntax. These experiences emphasized the importance of understanding hash prefixes and not relying solely on automation. 
+
+Using tools like Hashcat, John the Ripper, and rockyou.txt, I gained hands-on experience cracking hashes and saw how salts in bcrypt and SHA-512crypt increase resistance to attacks. The project improved my command-line skills, technical documentation, and reinforced the critical role of strong password policies as well as strong password storage policies in real-world security.
+  
+
 ## 🔙 Back to Portfolio
 [⬅️ Back to my Cybersecurity Portfolio](https://github.com/RobinBoucherSec/RobinBoucherSec)
 
