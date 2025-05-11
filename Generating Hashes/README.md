@@ -293,5 +293,19 @@ python3 -c 'import bcrypt; print(bcrypt.hashpw(b"iloveyou", bcrypt.gensalt()).de
   ![image](https://github.com/RobinBoucherSec/Cracking-hashes/blob/main/Generating%20Hashes/images%20hashes%20generating/bcrypt.png)
 
 
+## Summery
+
+This project demonstrates how to generate and crack hashes using tools like Hashcat , hashid in Kali Linux. I created hashes using various algorithms (MD5, SHA-256, SHA-512crypt, bcrypt) and I will crack them using dictionary attacks with the rockyou.txt wordlist in [Cracking hashes](https://github.com/RobinBoucherSec/Cracking-hashes/blob/main/Hashcat%20cracking/README.md).
+
+- Hash identification is crucial before attempting to crack.
+- Tools like Hashcat are powerful for GPU-based cracking.
+- Salted hashes like bcrypt and SHA-512crypt are more secure but still vulnerable to weak passwords.
+- Strong password policies and secure storage practices are essential to prevent breaches.
+
+  
+## 🔙 Back to Portfolio
+[⬅️ Back to my Cybersecurity Portfolio](https://github.com/RobinBoucherSec/RobinBoucherSec)
+
+
 
   
