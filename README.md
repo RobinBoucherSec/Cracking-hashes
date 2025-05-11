@@ -6,7 +6,7 @@ Here we will create hashes and then we will crack them just like if it was some 
 ## 🎯 Objective
 This lab aime to build foundational knowledge in password security, improve technical documentation skills, and develop a structured approach to using cybersecurity tools effectively in both offensive and defensive contexts.
 
-### Tools Used
+### 🔧 Tools Used
 
 - Notion – For deep documentation
 - Kali Linux
@@ -15,7 +15,7 @@ This lab aime to build foundational knowledge in password security, improve tech
 - Tools to generate hashes
 - rockyou.txt wordlist for dictionary attacks
 
-### Skills Learned
+### 💡 Skills Learned
 - Generated hashes using multiple algorithms
 - Identified hash types
 - Cracking hashes
