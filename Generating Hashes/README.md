@@ -26,7 +26,7 @@ My objective is to learn how to manually create hashes using various algorithms 
 2. [md5](#md5)
 3. [sha256](#sha256)
 4. [SHA512crypt](#SHA512)
-5. [bcryot](bcrypt)
+5. [bcrypt](bcrypt)
 
 
 ## Steps
