@@ -36,11 +36,11 @@ This lab aimed to build foundational knowledge in password security, improve tec
 
 [Time to CRACK 😱](#Time-to-CRACK-😱)
 
-[Id and Crack md5](Id-and-Crack-md5)
+[Id and Crack md5](#Id-and-Crack-md5)
 
-[Id and Crack sha256](Id-and-Crack-sha256)
+[Id and Crack sha256](#Id-and-Crack-sha256)
 
-[Id and Crack sha512crypt](Id-and-Crack-sha512crypt)
+[Id and Crack sha512crypt](#Id-and-Crack-sha512crypt)
 
 
 # Steps begin here
@@ -213,7 +213,11 @@ f0e2e750791171b0391b682ec35835bd6a5c3f7c8d1d0191451ec77b4d75f240
 
 ```!#/bin/bash
 hashid sha256_hash.txt
+```
+
 or
+
+```!#/bin/bash
 hashid f0e2e750791171b0391b682ec35835bd6a5c3f7c8d1d0191451ec77b4d75f24
 ```
 ![imge](https://github.com/RobinBoucherSec/Cracking-hashes/blob/main/Hashcat%20cracking/images/hashid%20sha256_hash.txt.png)
@@ -254,7 +258,7 @@ First identify the hash:
 
 output:$6$6zxk0rvcxNNvM2.t$ZrvO.OT9d2hvQzIo92wQeRd/C7advhtqrjRLHWSdQFMeDagUqI7/9KPwO/ZCn6.QVHSP03/9co/tHq3dgYe34/
 
-- Since [hashes.com](https://hashes.com/en/decrypt/hash) does not work with sha512crypt, I will use `hashid`.
+- Since [hashes.com](https://hashes.com/en/decrypt/hash) does not work with sha512crypt, as the site cannot crack salted, computationally expensive hashes like sha512crypt. I will use `hashid`.
 
 - And also, the hash has $6$ as its prefix witch is typical for sha512crypt.
 
@@ -286,29 +290,55 @@ I might have the GZip version of rockyou.txt. If that is the case, I add `.gz` a
 - Password is **`”princess”.`**
 
 
-
-
-
-
-
 ## Id and Crack bcrypt
 
 First identify the hash:
 
 $2b$12$GASflvqEVO67Be3JDaPHCOjPuCszRW4dOTBQIG9PGfpJlVIuhqR0K
 
-- The hash has $2b$ as its prefix witch is typical for bcrypt, knowing that  **`$2b$`**, **`$2y$`**, or **`$2a`**are bcrypt prefix.
+- The hash has $2b$ as its prefix witch is typical for bcrypt, knowing that  **`$2b$`**, **`$2y$`**, or **`$2a`**are bcrypt prefix. bcrypt does not work in [hashes.com](https://hashes.com/en/decrypt/hash) either, as the site cannot crack salted, computationally expensive hashes like bcrypt.
   
 - Otherwise, you can run the next command and you can see bcrypt in the output:
 
+```!#/bin/bash
+hashid bcrypt_hash.txt
+```
+or
 
+```!#/bin/bash
+hashid $2b$12$GASflvqEVO67Be3JDaPHCOjPuCszRW4dOTBQIG9PGfpJlVIuhqR0K
+```
 
+- For me its not working as you can see. Probably due to a limitation of hashid with bcrypt.
 
+![image](https://github.com/RobinBoucherSec/Cracking-hashes/blob/main/Hashcat%20cracking/images/hashid%20bcrypt.png)
+![image](https://github.com/RobinBoucherSec/Cracking-hashes/blob/main/Hashcat%20cracking/images/hashid%202b.png)
 
+- But it does not matter because I know the type of hash with the from the prefix.
+  
+- Now that I know the hash type, in the **Generic hashes** I type in [hashcat website](https://hashcat.net/wiki/doku.php?id=example_hashes), look for the number in the **Hash-Mode** column. For bcrypt it is 3200, so I put 3200 after the -m.
 
+![image](https://github.com/RobinBoucherSec/Cracking-hashes/blob/main/Hashcat%20cracking/images/3200.png)
 
+- Now I crack the hash:
 
+```!#/bin/bash
+hashcat -m 3200 -a 0 bcrypt_hash.txt /usr/share/wordlists/rockyou.txt
+```
 
+<details><summary>Problem encountered</summary>
+
+- Note that you might have the GZip version of rockyou.txt. If that is the case, add .gz a the end of the command or decompress with gunzip rockuyou.txt.gz
+  
+- Was not able to hashid the bcrypt_hash.txt. No need, it is obvious that it is a bcrypt since the recognizable prefix.
+
+</details>
+
+- Once the command is properly run, you should see this output:
+
+![image](https://github.com/RobinBoucherSec/Cracking-hashes/blob/main/Hashcat%20cracking/images/princess.png)
+
+- Password is ***`princess`***.
 
 ## 🔙 Back to Portfolio
 [⬅️ Back to my Cybersecurity Portfolio](https://github.com/RobinBoucherSec/RobinBoucherSec)
