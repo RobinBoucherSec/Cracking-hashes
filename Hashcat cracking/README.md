@@ -169,7 +169,7 @@ First, identify the hash:
 
 - A 32-character hexadecimal hash is typically an MD5 hash.
 
-- Otherwise, I can run the next command and I’ll have tips on what hash type it can be, then try them with the worldlist.
+- Otherwise, I can run the next command and I’ll have tips on what hash type it can be, then try them with the wordlist.
 
 ```!#/bin/bash
 hashid md5_hash.txt
@@ -225,7 +225,7 @@ hashid f0e2e750791171b0391b682ec35835bd6a5c3f7c8d1d0191451ec77b4d75f24
 ![imge](https://github.com/RobinBoucherSec/Cracking-hashes/blob/main/Hashcat%20cracking/images/hashid%20sha256_hash.txt.png)
 ![image](https://github.com/RobinBoucherSec/Cracking-hashes/blob/main/Hashcat%20cracking/images/hashid%20sha256%20f0.png)
 
-- Or, I can still use the no brainer[hashes.com](https://hashes.com/en/decrypt/hash) and enter the hash.
+- Or, I can still use the no brainer [hashes.com](https://hashes.com/en/decrypt/hash) and enter the hash.
   
 - Now that I know the hash type, in the **Generic hashes** type in [hashcat website](https://hashcat.net/wiki/doku.php?id=example_hashes), look for the number in the **Hash-Mode** column.
 
@@ -262,7 +262,7 @@ output:$6$6zxk0rvcxNNvM2.t$ZrvO.OT9d2hvQzIo92wQeRd/C7advhtqrjRLHWSdQFMeDagUqI7/9
 
 - Since [hashes.com](https://hashes.com/en/decrypt/hash) does not work with sha512crypt, as the site cannot crack salted, computationally expensive hashes like sha512crypt. I will use `hashid`.
 
-- And also, the hash has $6$ as its prefix witch is typical for sha512crypt.
+- And also, the hash has $6$ as its prefix which is typical for sha512crypt.
 
 - Otherwise, I can run the next command and I can confirm that it is SHA-512 Crypt:
 
@@ -298,7 +298,7 @@ First identify the hash:
 
 $2b$12$GASflvqEVO67Be3JDaPHCOjPuCszRW4dOTBQIG9PGfpJlVIuhqR0K
 
-- The hash has $2b$ as its prefix witch is typical for bcrypt, knowing that  **`$2b$`**, **`$2y$`**, or **`$2a`**are bcrypt prefix. bcrypt does not work in [hashes.com](https://hashes.com/en/decrypt/hash) either, as the site cannot crack salted, computationally expensive hashes like bcrypt.
+- The hash has $2b$ as its prefix which is typical for bcrypt, knowing that  **`$2b$`**, **`$2y$`**, or **`$2a`**are bcrypt prefix. bcrypt does not work in [hashes.com](https://hashes.com/en/decrypt/hash) either, as the site cannot crack salted, computationally expensive hashes like bcrypt.
   
 - Otherwise, I can run the next command and I can see bcrypt in the output:
 
@@ -324,7 +324,7 @@ hashid $2b$12$GASflvqEVO67Be3JDaPHCOjPuCszRW4dOTBQIG9PGfpJlVIuhqR0K
 
 - Now I crack the hash:
 
-```!#/bin/bash
+```#!/bin/bash
 hashcat -m 3200 -a 0 bcrypt_hash.txt /usr/share/wordlists/rockyou.txt
 ```
 
