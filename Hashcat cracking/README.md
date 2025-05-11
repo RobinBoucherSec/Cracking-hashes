@@ -32,7 +32,7 @@ This lab aimed to build foundational knowledge in password security, improve tec
 
 ## Steps Overview
 
-[Understand and Identify the hash](#Understand and Identify the hash)
+[Understand and Identify the hash](#Understand-and-Identify-the-hash)
 
 
 # Steps begin here
