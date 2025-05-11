@@ -342,7 +342,7 @@ hashcat -m 3200 -a 0 bcrypt_hash.txt /usr/share/wordlists/rockyou.txt
 
 - Password is **`iloveyou`**.
 
-  ## Fianl thoughts
+## Fianl thoughts
 
 Throughout this project, I encountered challenges like identifying hash types, especially when tools like hashid failed to detect bcrypt. I've leard easy troubleshooting issues with malformed hashes, GZip-compressed wordlists, and Hashcat syntax. These experiences emphasized the importance of understanding hash prefixes and not relying solely on automation. 
 
