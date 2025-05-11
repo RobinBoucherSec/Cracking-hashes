@@ -1,6 +1,6 @@
 ## Generating Hashes in Kali Linux
 
-Here, we will simply prepare the passwords in different hash format.
+Here, I will simply prepare the passwords in different hash format.
 
 ## Description
 
@@ -8,7 +8,7 @@ In this project, I explored how to generate different types of hashes (MD5, SHA-
 
 ## Objective
 
-To learn how to manually create hashes using various algorithms and understand how salting improves security in modern hashing techniques like bcrypt and SHA-512crypt.
+My objective is to learn how to manually create hashes using various algorithms and understand how salting improves security in modern hashing techniques like bcrypt and SHA-512crypt.
 
 ## Tools used
 
@@ -25,9 +25,9 @@ To learn how to manually create hashes using various algorithms and understand h
 
 ### Initial setup
 
-We will create four types of hashes one by one and store them in a file.
+I will create four types of hashes one by one and store them in a file.
 
-- First we will create the file location for all the hashes:
+- First I will create the file location for all the hashes:
 
 ``` bash
 mkdir -p ~/projects/hashes/
@@ -42,9 +42,9 @@ mkdir -p ~/projects/hashes/
 
 ### md5
 
-Note that you can use an online tools like [crackstation.net](https://crackstation.net/)  [hashes.com](https://hashes.com/en/decrypt/hash) or [tools4noobs.com](https://www.tools4noobs.com/) any other. This goes for all types of hashes.
+Note that I can use an online tools like [crackstation.net](https://crackstation.net/)  [hashes.com](https://hashes.com/en/decrypt/hash) or [tools4noobs.com](https://www.tools4noobs.com/) any other. This goes for all types of hashes.
 
-- But we will use the terminal to create the hash value for “poop” in md5. Here is how to create a hash and the file with the hash in it:
+- But we I  will use the terminal to create the hash value for “poop” in md5. Here is how to create a hash and the file with the hash in it:
 
 ```#!/bin/bash
 echo -n "poop" | md5sum > ~/projects/hashes/md5_hash.txt
@@ -67,9 +67,9 @@ echo -n "poop" | md5sum > ~/projects/hashes/md5_hash.txt
   
 </details>
 
-- You can open the md5_hash.txt with cat command to see the hash value.
+- I can open the md5_hash.txt with cat command to see the hash value.
 
-- Here you see what should happen in the terminal in kali linux:
+- Here I see what should happen in the terminal in kali linux:
 
   ![image](https://github.com/RobinBoucherSec/Cracking-hashes/blob/main/Generating%20Hashes/images%20hashes%20generating/md5.png)
 
@@ -99,7 +99,7 @@ echo -n "spongebob" | sha256sum > ~/projects/hashes/sha256_hash.txt
 </details>
 
 
-- You can open the sha256_hash.txt with cat command to see the hash value:
+- I can open the sha256_hash.txt with cat command to see the hash value:
 
 ![image](https://github.com/RobinBoucherSec/Cracking-hashes/blob/main/Generating%20Hashes/images%20hashes%20generating/sha256.png)
 
@@ -107,9 +107,9 @@ echo -n "spongebob" | sha256sum > ~/projects/hashes/sha256_hash.txt
 
   ### SHA512crypt
 
-Here you cannot use online tools for generating the hash. SHA512crypt uses the SHA-512 hash with random salt and configurable rounds. It's secure but faster than bcrypt, making it less resistant to brute-force attacks. 
+Here I cannot use online tools for generating the hash. SHA512crypt uses the SHA-512 hash with random salt and configurable rounds. It's secure but faster than bcrypt, making it less resistant to brute-force attacks. 
 
--  We will use the terminal to create the hash value for “princess” for sha512crypt. Here is how to create a hash and the file with the hash in it:
+-  I will use the terminal to create the hash value for “princess” for sha512crypt. Here is how to create a hash and the file with the hash in it:
 
 -  First verify that you have mkpasswd. It is part of the whois package, usually pre-installed on kali linux. If not, update/install it:
 
@@ -189,9 +189,9 @@ If the file doesn’t exist yet, it will be created automatically.
   
 </details>
 
-- Note that each time you run it, you’ll get a different hash because sha512crypt uses a random salt.
+- Note that each time I run it, I’ll get a different hash because sha512crypt uses a random salt.
   
-- You can open the sha512crypt_hash.txt with cat command to see the hash value:
+- I can open the sha512crypt_hash.txt with cat command to see the hash value:
 
 ![image](https://github.com/RobinBoucherSec/Cracking-hashes/blob/main/Generating%20Hashes/images%20hashes%20generating/sha512crypt.png)
 
@@ -201,9 +201,9 @@ If the file doesn’t exist yet, it will be created automatically.
 
 same thing here, you cannot use online tools for generating the hash. bcrypt uses a slower Blowfish cipher with random salt and a configurable work factor. It’s specifically designed for secure password storage and is more resistant to brute-force attacks. 
 
-- We will use the terminal to create the hash value for “iloveyou” for bcrypt. Here it is gonna be different. You can install node.js and bcrypt OR you can install python3 and bcrypt.
+- I will use the terminal to create the hash value for “iloveyou” for bcrypt. Here it is gonna be different. I can install node.js and bcrypt OR I can install python3 and bcrypt.
 
-- We will use python3. Install it if you dont already have it:
+- I will use python3. I Install it if I dont already have it:
 
 ```!#/bin/bash
   sudo apt install python3 python3-pip
@@ -278,9 +278,9 @@ python3 -c 'import bcrypt; print(bcrypt.hashpw(b"iloveyou", bcrypt.gensalt()).de
 
 </details>
 
-- Note that each time you run it, you’ll get a different hash because bcrypt uses a random salt.
+- Note that each time I run it, I’ll get a different hash because bcrypt uses a random salt.
   
-- You can open the bcrypt_hash.txt with cat command to see the hash value.
+- I can open the bcrypt_hash.txt with cat command to see the hash value.
 
   ![image](https://github.com/RobinBoucherSec/Cracking-hashes/blob/main/Generating%20Hashes/images%20hashes%20generating/bcrypt.png)
 
