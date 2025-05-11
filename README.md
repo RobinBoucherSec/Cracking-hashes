@@ -8,7 +8,6 @@ This lab aime to build foundational knowledge in password security, improve tech
 
 ### 🔧 Tools Used
 
-- Notion – For deep documentation
 - Kali Linux
 - Hashcat
 - Tools to identify hash types based on format
