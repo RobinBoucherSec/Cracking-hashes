@@ -25,8 +25,8 @@ My objective is to learn how to manually create hashes using various algorithms 
 1. [Initial Setup](#initial-setup)
 2. [md5](#md5)
 3. [sha256](#sha256)
-4. [SHA512crypt](#SHA512)
-5. [bcrypt](bcrypt)
+4. [SHA512crypt](#SHA512crypt)
+5. [bcrypt](#bcrypt)
 
 
 ## Steps
