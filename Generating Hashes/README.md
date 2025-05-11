@@ -75,7 +75,7 @@ echo -n "poop" | md5sum > ~/projects/hashes/md5_hash.txt
 
 ### sha256
 
-Here we will use the terminal to create the hash value for “spongebob” for sha256. Here is how to create a hash and the file with the hash in it:
+sha256 hashes can be created with online tool as well but we will use the terminal to create the hash value for “spongebob” for sha256. Here is how to create a hash and the file with the hash in it:
 
 ```#!/bin/bash
 echo -n "spongebob" | sha256sum > ~/projects/hashes/sha256_hash.txt
