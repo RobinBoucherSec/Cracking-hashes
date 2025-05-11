@@ -4,7 +4,7 @@ Here, we will simply prepare the passwords in different hash format.
 
 ## Description
 
-In this project, I explored how to generate different types of hashes (MD5, SHA-256, bcrypt, SHA-512crypt) using terminal commands in Kali Linux. This is a foundational skill in understanding password storage and security mechanisms.
+In this project, I explored how to generate different types of hashes (MD5, SHA-256, SHA-512crypt and bcrypt) using terminal commands in Kali Linux. This is a foundational skill in understanding password storage and security mechanisms.
 
 ## Objective
 
