@@ -1,7 +1,5 @@
 # 🎯 Cracking Hashes
 
-First, note that I've created a comprehensive and detailed Notion's guide of Hashcat that I suggest to you if you're interested in understading the fundamentals of hashing. It is called [Intro to Hashcat - Making & Cracking Hashes](https://bold-top-b0e.notion.site/Intro-to-Hashcat-making-cracking-hashes-1e2d8ff66ad2808c910fd25b868c9840?pvs=4). 
-
 ## 📝 Description
 Here we will create hashes and then we will crack them just like if it was some stolen passwords.
 
@@ -13,7 +11,6 @@ This lab aime to build foundational knowledge in password security, improve tech
 - Notion – For deep documentation
 - Kali Linux
 - Hashcat
-- John the Ripper (JtR)
 - Tools to identify hash types based on format
 - Tools to generate hashes
 - rockyou.txt wordlist for dictionary attacks
