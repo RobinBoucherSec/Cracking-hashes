@@ -4,7 +4,7 @@
 See here the detailed version on Nortion. It is called [Generating Hashes in Kali Linux](https://bold-top-b0e.notion.site/Generating-Hashes-in-Kali-Linux-1e2d8ff66ad28018b06fd12cdaca6c06). 
 
 ### 📝 Description
-In this project, I gained hands-on experience with hashing techniques and password cracking using different tools. I analyse the hash format of the hashes I've generated in [this repository](https://github.com/RobinBoucherSec/Cracking-hashes/blob/main/Generating%20Hashes/README.md) and performed dictionary attacks to simulate real-world password recovery or cracking scenarios.
+In this project, I gained hands-on experience with hashing techniques and password cracking using different tools. I analysed the hash format of the hashes I've generated in [this repository](https://github.com/RobinBoucherSec/Cracking-hashes/blob/main/Generating%20Hashes/README.md) and performed dictionary attacks to simulate real-world password recovery or cracking scenarios.
 
 ### 🎯 Objective
 This lab aimed to build foundational knowledge in password security, improve technical documentation skills, and develop a structured approach to using cybersecurity tools effectively in both offensive and defensive contexts.
@@ -42,6 +42,8 @@ This lab aimed to build foundational knowledge in password security, improve tec
 
 [Id and Crack sha512crypt](#Id-and-Crack-sha512crypt)
 
+[Id and Crack bcrypt](#Id-and-Crack-bcrypt)
+
 
 # Steps begin here
 
@@ -51,7 +53,7 @@ This lab aimed to build foundational knowledge in password security, improve tec
   
 - In this project, we have stored the hashes in /projects/hashes but usually in Linux the passwords are stored in /etc/shadow and are normally only readable by root.
   
-- You will find each line in this format:
+- Iwill find each line in this format:
 
 username:$prefix$options$salt$hash:last_change:min_age:max_age:warn_age:inactive_expire:expire_date:reserved
 
@@ -77,9 +79,9 @@ More info can be found by executing man 5 shadow.
 
 <details><summary>Here is how to Identify the type of hash</summary>
   
-To know what type of hash, you need to look at the $prefix$ and know it instantly, like in the following list. 
+To know what type of hash, Ineed to look at the $prefix$ and know it instantly, like in the following list. 
 
-Or you can use the hashid tool (recommended) or the hash-identifier (built-in script in kali linux).
+Or Ican use the hashid tool (recommended) or the hash-identifier (built-in script in kali linux).
 
 ### `$y$` — yescrypt
 
@@ -135,7 +137,7 @@ Usually, when an attacker finds a set of hashed passwords, they aren't labeled w
 
 <details><summary>Here is a word on easy crack</summary>
   
-To crack hashes, you can use online rainbow tables for weak or unsalted hashes like MD5 or SHA-1. However, rainbow tables are outdated and ineffective against salted hashes. For better results, use tools like Hashcat or John the Ripper with wordlists, rules, or mask attacks.
+To crack hashes, Ican use online rainbow tables for weak or unsalted hashes like MD5 or SHA-1. However, rainbow tables are outdated and ineffective against salted hashes. For better results, use tools like Hashcat or John the Ripper with wordlists, rules, or mask attacks.
 </details>
 
 <details><summary>Here is the difference between JtR, Hashcat and a wordlist</summary>
@@ -151,11 +153,11 @@ To crack hashes, you can use online rainbow tables for weak or unsalted hashes l
   
 hashcat -m <hash_type> -a <attack_mode> hashfile wordlist
 
--m <hash_type> sets the hash algorithm via a numeric identifier. For example, -m 1000 targets NTLM hashes. You can find the correct code for your hash type in Hashcat’s official documentation (man hashcat) or example guides.
+-m <hash_type> sets the hash algorithm via a numeric identifier. For example, -m 1000 targets NTLM hashes. I can find the correct code for the hash type in Hashcat’s official documentation (man hashcat) or example guides.
 
 -a <attack_mode> defines the attack strategy. For instance, -a 0 triggers a "straight" attack, which systematically tests each password in the wordlist sequentially.
 
-hashfile is the file containing the hash you aim to crack.
+hashfile is the file containing the hash I aim to crack.
 
 wordlist is the dictionary file holding potential passwords to test against the hash.
 </details>
@@ -167,7 +169,7 @@ First, identify the hash:
 
 - A 32-character hexadecimal hash is typically an MD5 hash.
 
-- Otherwise, you can run the next command and you’ll have tips on what hash type it can be, then try them with the worldlist.
+- Otherwise, I can run the next command and I’ll have tips on what hash type it can be, then try them with the worldlist.
 
 ```!#/bin/bash
 hashid md5_hash.txt
@@ -175,7 +177,7 @@ hashid md5_hash.txt
 
 - Or, a no brainer, go to [hashes.com](https://hashes.com/en/decrypt/hash) and enter the hash.
   
-- Now that you know the hash type, in the **Generic hashes** type in [hashcat website](https://hashcat.net/wiki/doku.php?id=example_hashes), look for the number in the **Hash-Mode** column.
+- Now that I know the hash type, in the **Generic hashes** type in [hashcat website](https://hashcat.net/wiki/doku.php?id=example_hashes), look for the number in the **Hash-Mode** column.
 
 For MD5 it is 0, so put 0 after the -m.
 
@@ -187,9 +189,9 @@ hashcat -m 0 -a 0 md5_hash.txt /usr/share/wordlists/rockyou.txt
 
 <details><summary>Problem encountered</summary>
   
-- Note that you might have the GZip version of rockyou.txt. If that is the case, add .gz a the end of the command or decompress with gunzip rockuyou.txt.gz
+- Note that I might have the GZip version of rockyou.txt. If that is the case, add .gz a the end of the command or decompress with gunzip rockuyou.txt.gz
   
-- If you got the message in the screenshot, you can open the hash with nano and delete the “-” at the end.
+- If I got the message in the screenshot, I can open the hash with nano and delete the “-” at the end.
   
 ![image](https://github.com/RobinBoucherSec/Cracking-hashes/blob/main/Hashcat%20cracking/images/token%20length%20md5.png)
 
@@ -209,7 +211,7 @@ f0e2e750791171b0391b682ec35835bd6a5c3f7c8d1d0191451ec77b4d75f240
 
 - The hash has **64 characters, t**his is a strong indicator of **SHA-256** , which always produces a 64-character hexadecimal string.
   
-- Otherwise, you can run the next command and you can see SHA-256 in the output:
+- Otherwise, I can run the next command and I can see SHA-256 in the output:
 
 ```!#/bin/bash
 hashid sha256_hash.txt
@@ -225,7 +227,7 @@ hashid f0e2e750791171b0391b682ec35835bd6a5c3f7c8d1d0191451ec77b4d75f24
 
 - Or, I can still use the no brainer[hashes.com](https://hashes.com/en/decrypt/hash) and enter the hash.
   
-- Now that you know the hash type, in the **Generic hashes** type in [hashcat website](https://hashcat.net/wiki/doku.php?id=example_hashes), look for the number in the **Hash-Mode** column.
+- Now that I know the hash type, in the **Generic hashes** type in [hashcat website](https://hashcat.net/wiki/doku.php?id=example_hashes), look for the number in the **Hash-Mode** column.
 
 ![image](https://github.com/RobinBoucherSec/Cracking-hashes/blob/main/Hashcat%20cracking/images/1400.png)
 
@@ -240,13 +242,13 @@ hashcat -m 1400 -a 0 sha256_hash.txt /usr/share/wordlists/rockyou.txt
 
 <details><summary>Problem encountered</summary>
 
-- Note that you might have the GZip version of rockyou.txt. If that is the case, add .gz a the end of the command or decompress with gunzip rockuyou.txt.gz
+- Note that I might have the GZip version of rockyou.txt. If that is the case, add .gz a the end of the command or decompress with gunzip rockuyou.txt.gz
   
-- If you got the message “Token length exception” you can open the hash with nano and delete the “-” at the end.
+- If I got the message “Token length exception” I can open the hash with nano and delete the “-” at the end.
 
 </details>
 
-- Once the command is properly run, you should see this output:
+- Once the command is properly run, I should see this output:
 
 ![image](https://github.com/RobinBoucherSec/Cracking-hashes/blob/main/Hashcat%20cracking/images/sha256%20spongebob.png)
 
@@ -262,7 +264,7 @@ output:$6$6zxk0rvcxNNvM2.t$ZrvO.OT9d2hvQzIo92wQeRd/C7advhtqrjRLHWSdQFMeDagUqI7/9
 
 - And also, the hash has $6$ as its prefix witch is typical for sha512crypt.
 
-- Otherwise, you can run the next command and you can confirm that it is SHA-512 Crypt:
+- Otherwise, I can run the next command and I can confirm that it is SHA-512 Crypt:
 
   ```!#/bin/bash
   hashid sha512_hash.txt
@@ -283,7 +285,7 @@ hashcat -m 1800 -a 0 sha512crypt_hash.txt /usr/share/wordlists/rockyou.txt
 I might have the GZip version of rockyou.txt. If that is the case, I add `.gz` a the end of the command or decompress with `gunzip rockuyou.txt.gz`
 </details>
 
-- Once the command is properly run, you should see this output:
+- Once the command is properly run, I should see this output:
 
 ![image](https://github.com/RobinBoucherSec/Cracking-hashes/blob/main/Hashcat%20cracking/images/sha512crypt%20princess.png)
 
@@ -298,7 +300,7 @@ $2b$12$GASflvqEVO67Be3JDaPHCOjPuCszRW4dOTBQIG9PGfpJlVIuhqR0K
 
 - The hash has $2b$ as its prefix witch is typical for bcrypt, knowing that  **`$2b$`**, **`$2y$`**, or **`$2a`**are bcrypt prefix. bcrypt does not work in [hashes.com](https://hashes.com/en/decrypt/hash) either, as the site cannot crack salted, computationally expensive hashes like bcrypt.
   
-- Otherwise, you can run the next command and you can see bcrypt in the output:
+- Otherwise, I can run the next command and I can see bcrypt in the output:
 
 ```!#/bin/bash
 hashid bcrypt_hash.txt
@@ -309,7 +311,7 @@ or
 hashid $2b$12$GASflvqEVO67Be3JDaPHCOjPuCszRW4dOTBQIG9PGfpJlVIuhqR0K
 ```
 
-- For me its not working as you can see. Probably due to a limitation of hashid with bcrypt.
+- For me its not working as I can see. Probably due to a limitation of hashid with bcrypt.
 
 ![image](https://github.com/RobinBoucherSec/Cracking-hashes/blob/main/Hashcat%20cracking/images/hashid%20bcrypt.png)
 ![image](https://github.com/RobinBoucherSec/Cracking-hashes/blob/main/Hashcat%20cracking/images/hashid%202b.png)
@@ -328,17 +330,17 @@ hashcat -m 3200 -a 0 bcrypt_hash.txt /usr/share/wordlists/rockyou.txt
 
 <details><summary>Problem encountered</summary>
 
-- Note that you might have the GZip version of rockyou.txt. If that is the case, add .gz a the end of the command or decompress with gunzip rockuyou.txt.gz
+- Note that I might have the GZip version of rockyou.txt. If that is the case, add .gz a the end of the command or decompress with gunzip rockuyou.txt.gz
   
 - Was not able to hashid the bcrypt_hash.txt. No need, it is obvious that it is a bcrypt since the recognizable prefix.
 
 </details>
 
-- Once the command is properly run, you should see this output:
+- Once the command is properly run, Ishould see this output:
 
 ![image](https://github.com/RobinBoucherSec/Cracking-hashes/blob/main/Hashcat%20cracking/images/princess.png)
 
-- Password is ***`princess`***.
+- Password is **`iloveyou`**.
 
 ## 🔙 Back to Portfolio
 [⬅️ Back to my Cybersecurity Portfolio](https://github.com/RobinBoucherSec/RobinBoucherSec)
