@@ -71,7 +71,7 @@ echo -n "poop" | md5sum > ~/projects/hashes/md5_hash.txt
 
 - Here you see what should happen in the terminal in kali linux:
 
-  ![image](https://github.com/RobinBoucherSec/Cracking-hashes/blob/main/Generating%20Hashes/md5.png)
+  ![image](https://github.com/RobinBoucherSec/Cracking-hashes/blob/main/Generating%20Hashes/images%20hashes%20generating/md5.png)
 
   ### sha256
 
@@ -98,5 +98,92 @@ echo -n "poop" | md5sum > ~/projects/hashes/md5_hash.txt
 
 </details>
 
+
 - You can open the sha256_hash.txt with cat command to see the hash value:
-[!image]()
+
+![image](https://github.com/RobinBoucherSec/Cracking-hashes/blob/main/Generating%20Hashes/images%20hashes%20generating/sha256.png)
+
+### bcrypt
+
+Note that bcrypt uses random salt, so for the same password, each time you hash it, it will be a different hash.
+
+- We will use the terminal to create the hash value for “iloveyou” for bcrypt. Here it is gonna be different. You can install node.js and bcrypt OR you can install python3 and bcrypt.
+
+- We will use python3. Install it if you dont already have it:
+
+  ```!#/bin/bash
+  sudo apt install python3 python3-pip
+pip3 install bcrypt
+```
+
+- Here is how to create a bcrypt hash and the file with the hash in it:
+
+```!#/bin/bash
+python3 -c 'import bcrypt; print(bcrypt.hashpw(b"iloveyou", bcrypt.gensalt()).decode())' > ~/projects/hashes/bcrypt_hash.txt
+```
+
+<details><summary>Command explanation here:</summary>
+  
+- python3
+
+  - Tell the system to use the Python 3 interpreter to run the code.
+
+- -c
+
+  - Tells Python to run the code that follows in quotes , instead of loading a file. This lets you execute Python code directly from the command line .
+
+- 'import bcrypt; print(bcrypt.hashpw(b"iloveyou", bcrypt.gensalt()).decode())'
+
+- This is the actual Python code being executed. It's wrapped in single quotes so the shell knows to treat it as one argument for Python
+
+</details>
+
+
+<details><summary>Here for the details of the python code</summary>
+
+
+- `import bcrypt`
+
+  - Loads the bcrypt module , which must already be installed (`pip install bcrypt`). Provides functions for secure password hashing.
+
+- `b"Shashimi"`
+
+  - The `b` prefix means this is a byte string , required by `bcrypt.hashpw()`. bcrypt only works with bytes, not regular strings.
+
+- `bcrypt.gensalt()`
+
+  - Generates a new random salt every time it's called. Salt ensures that even if the same password is hashed multiple times, the output will always be different.
+
+- `bcrypt.hashpw(...)`
+
+  - This is the core function that actually hashes the password using bcrypt.
+  
+- Takes two arguments:
+  
+    - Password (as bytes)
+ 
+    - Salt (generated above)
+
+- `.decode()`
+
+  - Converts the byte string hash into a regular UTF-8 string.
+  
+- Needed because `hashpw()` returns a byte string like:
+  
+    b'$2b$12$abc123...’
+
+- But we want to store it as:
+    
+    $2b$12$abc123…
+    
+- F. `print(...)` Outputs the final hash string so it can be redirected to a file.
+
+- And finaly, note that > `~/projects/hashes/bcrypt_hash.txt` is not part of python, it’s handled by the Linux shell. > is the output redirection operator, it  takes whatever is printed by the Python script and writes it to the file location described.
+
+</details>
+
+- Note that each time you run it, you’ll get a different hash because bcrypt uses a random salt.
+  
+- You can open the bcrypt_hash.txt with cat command to see the hash value.
+
+  ![image]()
