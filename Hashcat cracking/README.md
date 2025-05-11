@@ -9,7 +9,7 @@ In this project, I gained hands-on experience with hashing techniques and passwo
 ### 🎯 Objective
 This lab aimed to build foundational knowledge in password security, improve technical documentation skills, and develop a structured approach to using cybersecurity tools effectively in both offensive and defensive contexts.
 
-### Tools Used
+### 🔧 Tools Used
 
 - Notion – For deep documentation
 - Kali Linux – For penetration testing and command-line operations
@@ -20,7 +20,7 @@ This lab aimed to build foundational knowledge in password security, improve tec
 - Online tools (hashes.com ...)
 
   
-### Skills Learned
+### 💡 Skills Learned
 
 - Identified hash types by analyzing prefixes ($2b$, $6$, etc.) using hashid and online tools
 - Cracked hashes using dictionary attacks with Hashcat
@@ -45,7 +45,7 @@ This lab aimed to build foundational knowledge in password security, improve tec
 [Id and Crack bcrypt](#Id-and-Crack-bcrypt)
 
 
-# Steps begin here
+# ⚙️ Steps begin here
 
 ### Understand and Identify the hash
 
