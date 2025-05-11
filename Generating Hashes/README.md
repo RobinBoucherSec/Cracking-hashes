@@ -20,6 +20,15 @@ My objective is to learn how to manually create hashes using various algorithms 
 - rockyou.txt wordlist – For future cracking attempts using tools like Hashcat or John the Ripper
 - Online tools – Such as crackstation.net , hashes.com , or tools4noobs.com for hash verification and identification
 
+## Steps Overview
+
+[Initial setup](###Initial-setup)
+
+# Steps Overview
+1. [Initial Setup](#initial-setup)
+2. [md5](#md5)
+3. [sha256](#sha256)
+
 
 ## Steps
 
