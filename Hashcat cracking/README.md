@@ -1,8 +1,6 @@
 
 # 🎯 Hashcat cracking in Kali Linux
 
-See here the detailed version on Nortion. It is called [Generating Hashes in Kali Linux](https://bold-top-b0e.notion.site/Generating-Hashes-in-Kali-Linux-1e2d8ff66ad28018b06fd12cdaca6c06). 
-
 ### 📝 Description
 In this project, I gained hands-on experience with hashing techniques and password cracking using different tools. I analysed the hash format of the hashes I've generated in [this repository](https://github.com/RobinBoucherSec/Cracking-hashes/blob/main/Generating%20Hashes/README.md) and performed dictionary attacks to simulate real-world password recovery or cracking scenarios.
 
@@ -11,7 +9,6 @@ This lab aimed to build foundational knowledge in password security, improve tec
 
 ### 🔧 Tools Used
 
-- Notion – For deep documentation
 - Kali Linux – For penetration testing and command-line operations
 - Hashcat – Advanced password recovery tool for GPU-based hash cracking
 - hashid – Tool to identify hash types based on format
