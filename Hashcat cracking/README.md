@@ -41,6 +41,10 @@ This lab aimed to build foundational knowledge in password security, improve tec
 
 [Id and Crack bcrypt](#Id-and-Crack-bcrypt)
 
+[Lessons Learned](#Lessons-Learned)
+
+
+[Final thoughts](#Final-Thoughts)
 
 # ⚙️ Steps begin here
 
@@ -339,11 +343,17 @@ hashcat -m 3200 -a 0 bcrypt_hash.txt /usr/share/wordlists/rockyou.txt
 
 - Password is **`iloveyou`**.
 
+## Lessons learned
+
+- When I get this kind of message like in the screenshot below, I verify that the content of the hash does not have extra caracters like the “-” at the end. So I open the hash with nano and delete what not part of the hash value.
+
+![image](https://github.com/RobinBoucherSec/Cracking-hashes/blob/main/Hashcat%20cracking/images/token%20length%20md5.png)
+
 ## Final thoughts
 
 Throughout this project, I encountered challenges like identifying hash types, especially when tools like hashid failed to detect bcrypt. I've leard easy troubleshooting issues with malformed hashes, GZip-compressed wordlists, and Hashcat syntax. These experiences emphasized the importance of understanding hash prefixes and not relying solely on automation. 
 
-Using tools like Hashcat, John the Ripper, and rockyou.txt, I gained hands-on experience cracking hashes and saw how salts in bcrypt and SHA-512crypt increase resistance to attacks. The project improved my command-line skills, technical documentation, and reinforced the critical role of strong password policies as well as strong password storage policies in real-world security.
+Using tools like Hashcat and rockyou.txt, I gained hands-on experience cracking hashes and saw how salts in bcrypt and SHA-512crypt increase resistance to attacks. The project improved my command-line skills, technical documentation, and reinforced the critical role of strong password policies as well as strong password storage policies in real-world security.
   
 
 ## 🔙 Back to Portfolio
