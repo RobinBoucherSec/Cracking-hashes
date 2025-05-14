@@ -22,11 +22,17 @@ My objective is to learn how to manually create hashes using various algorithms 
 
 
 # Steps Overview
-1. [Initial Setup](#initial-setup)
-2. [md5](#md5)
-3. [sha256](#sha256)
-4. [SHA512crypt](#SHA512crypt)
-5. [bcrypt](#bcrypt)
+[Initial Setup](#initial-setup)
+
+[md5](#md5)
+
+[sha256](#sha256)
+
+[SHA512crypt](#SHA512crypt)
+
+[bcrypt](#bcrypt)
+
+[Key Takeaways & Technical Insights](#Key-Takeaways-and-Technical-Insights)
 
 
 ## Steps
@@ -293,7 +299,8 @@ python3 -c 'import bcrypt; print(bcrypt.hashpw(b"iloveyou", bcrypt.gensalt()).de
   ![image](https://github.com/RobinBoucherSec/Cracking-hashes/blob/main/Generating%20Hashes/images%20hashes%20generating/bcrypt.png)
 
 
-## Summery
+## Key Takeaways and Technical Insights
+
 
 This project demonstrates how to generate and crack hashes using tools like Hashcat , hashid in Kali Linux. I created hashes using various algorithms (MD5, SHA-256, SHA-512crypt, bcrypt) and I will crack them using dictionary attacks with the rockyou.txt wordlist in [Cracking hashes](https://github.com/RobinBoucherSec/Cracking-hashes/blob/main/Hashcat%20cracking/README.md).
 
