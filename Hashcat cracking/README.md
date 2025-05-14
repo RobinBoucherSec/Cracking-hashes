@@ -43,7 +43,6 @@ This lab aimed to build foundational knowledge in password security, improve tec
 
 [Lessons Learned](#Lessons-Learned)
 
-
 [Final thoughts](#Final-Thoughts)
 
 # ⚙️ Steps begin here
