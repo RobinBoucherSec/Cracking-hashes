@@ -41,7 +41,7 @@ This lab aimed to build foundational knowledge in password security, improve tec
 
 [Id and Crack bcrypt](#Id-and-Crack-bcrypt)
 
-[Key Takeaways & Technical Insights](#Key-Takeaways-Technical-Insights)
+[Key Takeaways & Technical Insights](#Key-Takeaways-and-Technical-Insights)
 
 # ⚙️ Steps begin here
 
@@ -340,7 +340,7 @@ hashcat -m 3200 -a 0 bcrypt_hash.txt /usr/share/wordlists/rockyou.txt
 
 - Password is **`iloveyou`**.
 
-## Key Takeaways & Technical Insights
+## Key Takeaways and Technical Insights
 
 - When I get this kind of message like in the screenshot below, I verify that the content of the hash does not have extra caracters like the “-” at the end. So I open the hash with nano and delete what not part of the hash value.
 
