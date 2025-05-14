@@ -41,9 +41,8 @@ This lab aimed to build foundational knowledge in password security, improve tec
 
 [Id and Crack bcrypt](#Id-and-Crack-bcrypt)
 
-[Lessons Learned](#Lessons-Learned)
-
-[Final thoughts](#Final-Thoughts)
+[Key Takeaways & Technical Insights
+](#Key-Takeaways-&-Technical-Insights)
 
 # ⚙️ Steps begin here
 
@@ -342,13 +341,11 @@ hashcat -m 3200 -a 0 bcrypt_hash.txt /usr/share/wordlists/rockyou.txt
 
 - Password is **`iloveyou`**.
 
-## Lessons learned
+## Key Takeaways & Technical Insights
 
 - When I get this kind of message like in the screenshot below, I verify that the content of the hash does not have extra caracters like the “-” at the end. So I open the hash with nano and delete what not part of the hash value.
 
 ![image](https://github.com/RobinBoucherSec/Cracking-hashes/blob/main/Hashcat%20cracking/images/token%20length%20md5.png)
-
-## Final thoughts
 
 Throughout this project, I encountered challenges like identifying hash types, especially when tools like hashid failed to detect bcrypt. I've leard easy troubleshooting issues with malformed hashes, GZip-compressed wordlists, and Hashcat syntax. These experiences emphasized the importance of understanding hash prefixes and not relying solely on automation. 
 
