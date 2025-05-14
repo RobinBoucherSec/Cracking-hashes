@@ -41,7 +41,7 @@ This lab aimed to build foundational knowledge in password security, improve tec
 
 [Id and Crack bcrypt](#Id-and-Crack-bcrypt)
 
-[Key Takeaways & Technical Insights](#Key-Takeaways-&-Technical-Insights)
+[Key Takeaways & Technical Insights](#Key-Takeaways-Technical-Insights)
 
 # ⚙️ Steps begin here
 
