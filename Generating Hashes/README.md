@@ -21,6 +21,17 @@ My objective is to learn how to manually create hashes using various algorithms 
 - Online tools – Such as crackstation.net , hashes.com , or tools4noobs.com for hash verification and identification
 
 
+## 💡Skills learned
+
+- Generated cryptographic hashes using terminal commands in Kali Linux (md5, sha256sum for, mkpasswd sha512crypt and python3 for bcrypt)
+
+- Observed how random salting affects hash output by generating different results for the same password across multiple runs
+
+- How to store generated hashes into files for further use or analysis
+
+- Gained experience working with byte strings and string encoding/decoding in Python for proper hash formatting
+
+
 # Steps Overview
 [Initial Setup](#initial-setup)
 
@@ -35,19 +46,7 @@ My objective is to learn how to manually create hashes using various algorithms 
 [Key Takeaways and Technical Insights](#Key-Takeaways-and-Technical-Insights)
 
 
-## 💡Skills learned
-
-- Generated cryptographic hashes using terminal commands in Kali Linux (md5, sha256sum for, mkpasswd sha512crypt and python3 for bcrypt)
-
-- Observed how random salting affects hash output by generating different results for the same password across multiple runs
-
-- How to store generated hashes into files for further use or analysis
-
-- Gained experience working with byte strings and string encoding/decoding in Python for proper hash formatting
-
-
-
-## Steps
+## Steps begin here ⬇️ 
 
 ### Initial setup
 
