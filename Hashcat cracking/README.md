@@ -27,7 +27,7 @@ This lab aimed to build foundational knowledge in password security, improve tec
 - Gained awareness of password security and the importance of strong authentication practices
 - Documented technical processes clearly and systematically
 
-## Steps Overview
+## ⚙️ Steps Overview
 
 [Understand and Identify the hash](#Understand-and-Identify-the-hash)
 
@@ -43,7 +43,8 @@ This lab aimed to build foundational knowledge in password security, improve tec
 
 [Key Takeaways & Technical Insights](#Key-Takeaways-and-Technical-Insights)
 
-# ⚙️ Steps begin here
+## Steps begin here ⬇️ 
+
 
 ### Understand and Identify the hash
 
