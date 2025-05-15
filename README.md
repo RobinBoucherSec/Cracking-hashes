@@ -1,7 +1,7 @@
 # 🎯 Cracking Hashes
 
 ## 📝 Description
-Here we will create hashes and then we will crack them just like if it was some stolen passwords.
+Here we will [generate hashes](https://github.com/RobinBoucherSec/Cracking-hashes/tree/main/Generating%20Hashes) and then we will [crack them](https://github.com/RobinBoucherSec/Cracking-hashes/tree/main/Hashcat%20cracking) just like if it was some stolen passwords.
 
 ## 🎯 Objective
 This lab aime to build foundational knowledge in password security, improve technical documentation skills, and develop a structured approach to using cybersecurity tools effectively in both offensive and defensive contexts.
