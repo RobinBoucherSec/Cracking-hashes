@@ -32,7 +32,7 @@ My objective is to learn how to manually create hashes using various algorithms 
 - Gained experience working with byte strings and string encoding/decoding in Python for proper hash formatting
 
 
-# Steps Overview
+# ⚙️ Steps Overview
 [Initial Setup](#initial-setup)
 
 [md5](#md5)
