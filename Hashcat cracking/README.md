@@ -1,5 +1,5 @@
 
-# 🎯 Hashcat cracking in Kali Linux
+#  Hashcat cracking in Kali Linux
 
 ### 📝 Description
 In this project, I gained hands-on experience with hashing techniques and password cracking using different tools. I analysed the hash format of the hashes I've generated in [this repository](https://github.com/RobinBoucherSec/Cracking-hashes/blob/main/Generating%20Hashes/README.md) and performed dictionary attacks to simulate real-world password recovery or cracking scenarios.
