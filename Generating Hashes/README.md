@@ -1,16 +1,16 @@
-## Generating Hashes in Kali Linux
+# Generating Hashes in Kali Linux
 
 Here, I will simply prepare the passwords in different hash format.
 
-## Description
+## 📝 Description
 
 In this project, I explored how to generate different types of hashes (MD5, SHA-256, SHA-512crypt and bcrypt) using terminal commands in Kali Linux. This is a foundational skill in understanding password storage and security mechanisms.
 
-## Objective
+## 🎯 Objective
 
 My objective is to learn how to manually create hashes using various algorithms and understand how salting improves security in modern hashing techniques like bcrypt and SHA-512crypt.
 
-## Tools used
+## 🔧 Tools used
 
 - Kali Linux – For terminal operations and hash generation
 - MD5sum – To generate MD5 hashes
@@ -32,7 +32,19 @@ My objective is to learn how to manually create hashes using various algorithms 
 
 [bcrypt](#bcrypt)
 
-[Key Takeaways & Technical Insights](#Key-Takeaways-and-Technical-Insights)
+[Key Takeaways and Technical Insights](#Key-Takeaways-and-Technical-Insights)
+
+
+## 💡Skills learned
+
+- Generated cryptographic hashes using terminal commands in Kali Linux (md5, sha256sum for, mkpasswd sha512crypt and python3 for bcrypt)
+
+- Observed how random salting affects hash output by generating different results for the same password across multiple runs
+
+- How to store generated hashes into files for further use or analysis
+
+- Gained experience working with byte strings and string encoding/decoding in Python for proper hash formatting
+
 
 
 ## Steps
